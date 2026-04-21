@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, Navigate } from 'react-router-dom';
 import { FitnessProvider } from './context/FitnessContext';
 import Activities from './components/Activities';
 import ActivityDetail from './components/ActivityDetail';
@@ -14,6 +14,7 @@ function App() {
         <Link to="/stats">Stats</Link>
       </nav>
       <Routes>
+        <Route path="/" element={<Navigate to="/activities" />} />
         <Route path="/activities" element={<Activities />} />
         <Route path="/activities/:id" element={<ActivityDetail />} />
         <Route path="/filter" element={<Filter />} />

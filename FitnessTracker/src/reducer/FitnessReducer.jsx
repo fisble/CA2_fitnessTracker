@@ -6,6 +6,11 @@ const FitnessReducer = (state, action) => {
         fitness: action.payload,
         loading: false,
       };
+    case "SET_ERROR":
+      return {
+        ...state,
+        loading: false,
+      };
     case "SET_FAVORITES":
       return {
         ...state,

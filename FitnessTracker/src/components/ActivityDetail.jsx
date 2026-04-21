@@ -8,7 +8,7 @@ const ActivityDetail = () => {
 
   if (loading) return <div>Loading activity details...</div>;
 
-  const activity = fitness.find(act => act.activityId === id);
+  const activity = fitness.find(act => String(act.activityId) === String(id));
 
   if (!activity) {
     return (
