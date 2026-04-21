@@ -1,0 +1,10 @@
+{
+  "buildCommand": "cd FitnessTracker && npm run build",
+  "outputDirectory": "FitnessTracker/dist",
+  "rewrites": [
+    {
+      "source": "/((?!assets|.*\\..*).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
